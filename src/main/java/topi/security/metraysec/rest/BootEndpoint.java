@@ -13,8 +13,9 @@ public class BootEndpoint {
 	BootRepository br;
 
 	@GetMapping("hoi")
-	public void go() {
+	public String go() {
 		System.out.println("hoi");
 		br.save(new Boot());
+		return "het is goed gegaan";
 	}
 }

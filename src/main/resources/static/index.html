@@ -1,0 +1,16 @@
+<script>
+    var zenden = {};
+    zenden.username = "johndoe";
+    zenden.password = "password2019";
+    var teverzenden = JSON.stringify(zenden);
+    fetch("http://localhost:8080/api/auth", {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: teverzenden
+    })
+    .then(r => r.json())
+    .then(d=> console.log(d))
+</script>
